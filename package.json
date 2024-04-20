@@ -5,7 +5,9 @@
 	"main": "app.ts",
 	"scripts": {
 		"start": "tsx .",
-		"start:dev": "tsx watch --ignore ./database/data.db --ignore ./database/data.db-journal ."
+		"start:dev": "tsx watch --ignore ./database/data.db --ignore ./database/data.db-journal .",
+		"review": "tsx review.ts",
+		"review:dev": "tsx watch --ignore ./database/data.db --ignore ./database/data.db-journal review.ts"
 	},
 	"keywords": [],
 	"author": "momu54",
@@ -21,6 +23,7 @@
 		"sqlite": "^5.1.1",
 		"sqlite3": "^5.1.7",
 		"tsx": "^4.7.2",
-		"typescript": "^5.4.5"
+		"typescript": "^5.4.5",
+		"yesno": "^0.4.0"
 	}
 }

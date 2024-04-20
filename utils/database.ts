@@ -7,6 +7,11 @@ interface Owner {
 	blocked: 1 | 0;
 }
 
+export enum ReviewMode {
+	Unchecked,
+	Checked,
+}
+
 class OnTimifyDatabase extends Database {
 	private constructor() {
 		super({
@@ -27,6 +32,26 @@ class OnTimifyDatabase extends Database {
 
 	public AddOwner(ownerID: string) {
 		return super.run(SQL`INSERT INTO Owner(id) VALUES (${ownerID})`);
+	}
+
+	public GetOwners(mode: ReviewMode) {
+		return super.all<Owner[]>(
+			mode === ReviewMode.Checked
+				? `SELECT * FROM Owner WHERE checked = 0`
+				: `SELECT * FROM Owner WHERE checked = 1`
+		);
+	}
+
+	public MarkOwnerBlocked(ownerID: string, blocked: boolean) {
+		return super.run(
+			SQL`UPDATE Owner SET blocked = ${blocked ? 1 : 0} WHERE id = ${ownerID}`
+		);
+	}
+
+	public MarkOwnerChecked(ownerID: string, checked: boolean) {
+		return super.run(
+			SQL`UPDATE Owner SET checked = ${checked ? 1 : 0} WHERE id = ${ownerID}`
+		);
 	}
 }
 

@@ -35,6 +35,9 @@ dependencies:
   typescript:
     specifier: ^5.4.5
     version: 5.4.5
+  yesno:
+    specifier: ^0.4.0
+    version: 0.4.0
 
 packages:
 
@@ -1696,4 +1699,8 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+    dev: false
+
+  /yesno@0.4.0:
+    resolution: {integrity: sha512-tdBxmHvbXPBKYIg81bMCB7bVeDmHkRzk5rVJyYYXurwKkHq/MCd8rz4HSJUP7hW0H2NlXiq8IFiWvYKEHhlotA==}
     dev: false
