@@ -51,7 +51,7 @@ fastify.post<OwnerGeneric>('/api/owner', async (request, reply) => {
 
 try {
 	const part = parseInt(env.PORT ?? '3000');
-	await fastify.listen({ port: part });
+	await fastify.listen({ port: part, host: '::' });
 	logger.info(`Server started at port ${part}`);
 } catch (err) {
 	fastify.log.error(err);
