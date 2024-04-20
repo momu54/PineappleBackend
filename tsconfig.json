@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+		"module": "NodeNext",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		/* Type Checking */
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"alwaysStrict": true,
+		"moduleResolution": "NodeNext",
+		"resolveJsonModule": true,
+		"sourceMap": true,
+		"allowImportingTsExtensions": true,
+		"noEmit": true
+	},
+	"include": ["**/*.ts", "*.ts"],
+	"exclude": ["node_modules/**"]
+}
