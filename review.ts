@@ -6,6 +6,7 @@ const checkedOnly = await yesno({
 	question: `Do you want to show unchecked owners only? (${chalk.redBright(
 		'No'
 	)} = checked only) (${chalk.greenBright('Yes')})`,
+	defaultValue: true,
 });
 
 const mode = checkedOnly ? ReviewMode.Checked : ReviewMode.Unchecked;
