@@ -1,0 +1,6 @@
+CREATE TABLE "Owner" (
+	"id"	TEXT NOT NULL,
+	"blocked"	INTEGER NOT NULL DEFAULT 0,
+	"checked"	INTEGER DEFAULT 0,
+	UNIQUE("id")
+)
