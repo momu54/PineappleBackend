@@ -22,7 +22,7 @@ for (const owner of owners) {
 	);
 	const defaultValueTip = owner.blocked
 		? chalk.greenBright('Yes')
-		: chalk.greenBright('No');
+		: chalk.redBright('No');
 	const blocked = await yesno({
 		question: owner.blocked
 			? `Do you want to keep this owner blocked? (${defaultValueTip})`
